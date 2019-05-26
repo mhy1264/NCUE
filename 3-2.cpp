@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//git test
+ 
 int main()
 {
     int N, M, K;
