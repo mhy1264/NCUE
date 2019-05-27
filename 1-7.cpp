@@ -2,7 +2,7 @@
 #include<stdlib.h>
  /******
  * 未進入fun();-2019.05.18 
- *
+ * (0,0,4,1)未通過 
  *
  *
  *
@@ -34,7 +34,7 @@ float lu(float x0,float y0,float x,float y)
 	} 	
 }
 
-float ld(float x0,float y0,float x,float y)
+float ld(float x0 , float y0 , float x , float y)
 {
 	if(x0 >0 && y0 > 0)
 	{
@@ -43,19 +43,19 @@ float ld(float x0,float y0,float x,float y)
 	} 	
 }
 
-float fun(float x0,float y0,float lenth,int times,float x,float y)
+float fun(float x0 , float y0 , float lenth , int times , float x , float y )
 {
 	lenth/=2; 
-	ru(x0+lenth,y0+lenth,x,y);//右上 
-	rd(x0+lenth,y0-lenth,x,y);//右下 
-	lu(x0-lenth,y0+lenth,x,y);//左上 
+	ru(x0+lenth , y0+lenth , x , y );//右上 
+	rd(x0+lenth , y0-lenth , x , y );//右下 
+	lu(x0-lenth , y0+lenth , x , y );//左上 
 	ld(x0-lenth,y0-lenth,x,y);//左下 
 	if(times == 0)
 	{
 		printf("%d %d",x,y);
 		return 0;
 	}
-	return fun( x0/2 , y0/2 , lenth /2 , times -1,x,y);	
+	return fun( x0 , y0 , lenth /2 , times -1,x,y);	
 }
 
 int main()
