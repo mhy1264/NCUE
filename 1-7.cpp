@@ -63,7 +63,6 @@ int main()
 	float x0,y0,lenth,x,y;
 	int times;
 	scanf("%f %f %f %d",&x0,&y0,&lenth,&times);
-	
 	fun(x0,y0,lenth,times,x,y);	
 
 }
