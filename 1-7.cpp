@@ -1,55 +1,56 @@
 #include<stdio.h> 
 #include<stdlib.h>
  /******
- * •º∂i§Jfun();-2019.05.18 
- * (0,0,4,1)•º≥qπL 
- * ß‚ ru rd lu ld ™∫∞∆µ{¶°≤æ®Ïfun( )§∫ 
+ * Êú™ÈÄ≤ÂÖ•fun();-2019.05.18 
+ * (0,0,4,1)Êú™ÈÄöÈÅé 
+ * Êää ru rd lu ld ÁöÑÂâØÁ®ãÂºèÁßªÂà∞fun( )ÂÖß 
  *
  *
  *****/
-float ru(float x0,float y0,float x,float y)
+float ru( float x0 , float y0 , float *x , float *y )
 {
 	if(x0 >0 && y0 > 0)
 	{
-		x+= x0 ; 
-		y+= y0 ;
+		*x+= x0 ; 
+		*y+= y0 ;
 	} 
 }
 
-float rd(float x0,float y0,float x,float y)
+float rd(float x0 , float y0 , float *x , float *y)
 {
 	if(x0 >0 && y0 > 0)
 	{
-		x+= x0 ; 
-		y+= y0 ;
+		*x+= x0 ; 
+		*y+= y0 ;
 	} 
 }
 
-float lu(float x0,float y0,float x,float y)
+float lu(float x0 , float y0 , float *x , float *y)
 {
 	if(x0 >0 && y0 > 0)
 	{
-		x+= x0 ; 
-		y+= y0 ;
+		*x+= x0 ; 
+		*y+= y0 ;
 	} 	
 }
 
-float ld(float x0 , float y0 , float x , float y)
+float ld(float x0 , float y0 , float *x , float *y)
 {
 	if(x0 >0 && y0 > 0)
 	{
-		x+= x0 ; 
-		y+= y0 ;
+		*x+= x0 ; 
+		*y+= y0 ;
 	} 	
 }
 
-float fun(float x0 , float y0 , float lenth , int times , float x , float y )
+float fun(float x0 , float y0 , float lenth , int times )
 {
-	lenth/=2; 
-	ru(x0+lenth , y0+lenth , x , y );//•k§W 
-	rd(x0+lenth , y0-lenth , x , y );//•k§U 
-	lu(x0-lenth , y0+lenth , x , y );//•™§W 
-	ld(x0-lenth,y0-lenth,x,y);//•™§U 
+	lenth/=2;
+	float x,y;
+	ru(x0+lenth , y0+lenth , &x , &y );//Âè≥‰∏ä 
+	rd(x0+lenth , y0-lenth , &x , &y );//Âè≥‰∏ã 
+	lu(x0-lenth , y0+lenth , &x , &y );//Â∑¶‰∏ä 
+	ld(x0-lenth , y0-lenth , &x , &y );//Â∑¶‰∏ã 
 	if(times == 0)
 	{
 		printf("%d %d",x,y);
@@ -60,9 +61,9 @@ float fun(float x0 , float y0 , float lenth , int times , float x , float y )
 
 int main()
 {
-	float x0,y0,lenth,x,y;
+	float x0,y0,lenth;
 	int times;
 	scanf("%f %f %f %d",&x0,&y0,&lenth,&times);
-	fun(x0,y0,lenth,times,x,y);	
+	fun(x0,y0,lenth,times);	
 
 }
