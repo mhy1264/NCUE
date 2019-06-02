@@ -1,9 +1,8 @@
 #include<stdio.h> 
 #include<stdlib.h>
  /******
- * 未進入fun();-2019.05.18 
  * (0,0,4,1)未通過 
- * 把 ru rd lu ld 的副程式移到fun( )內 
+ * 把 ru rd lu ld 的副程式移到fun( )內=>用4array去紀錄4個分身 
  *
  *
  *****/
